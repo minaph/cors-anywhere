@@ -5,7 +5,7 @@ const proxy = cors_proxy.createServer();
 
 // Register an HTTP function with the Functions Framework
 functions.http('myHttpFunction', (req, res) => {
-  // Your code here
-
-  proxy.emit("request", req, res);
+    // Your code here
+    console.log({ req })
+    proxy.emit("request", req, res);
 });
